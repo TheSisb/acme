@@ -24,6 +24,7 @@ module.exports = {
     "@typescript-eslint/consistent-type-imports": "error",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-empty-function": "off",
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/non-nullable-type-assertion-style": "error",
     "@typescript-eslint/prefer-optional-chain": "error",

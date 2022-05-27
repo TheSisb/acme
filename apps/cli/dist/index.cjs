@@ -17,7 +17,7 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 // src/index.ts
 var import_yargs = __toESM(require("yargs"), 1);
 var import_helpers = require("yargs/helpers");
-(0, import_yargs.default)((0, import_helpers.hideBin)(process.argv)).command("curl <url>", "fetch the contents of the URL", () => {
+void (0, import_yargs.default)((0, import_helpers.hideBin)(process.argv)).command("curl <url>", "fetch the contents of the URL", () => {
 }, (argv) => {
   console.info(argv);
 }).demandCommand(1).parse();
