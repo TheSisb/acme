@@ -1,0 +1,20 @@
+{
+  "name": "@acme/cli",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": "./dist/index.js",
+  "scripts": {
+    "dev": "",
+    "build": "",
+    "start": "",
+    "lint": ""
+  },
+  "devDependencies": {
+    "@acme/eslint-config": "*",
+    "@acme/tsconfig": "*",
+    "@types/node": "17.0.35",
+    "eslint": "8.16.0",
+    "typescript": "4.7.2"
+  }
+}
