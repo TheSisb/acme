@@ -34,4 +34,4 @@ yarn-error.log*
 .turbo
 
 # build
-dist/
+dist
