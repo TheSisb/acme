@@ -14,12 +14,12 @@
     }
   },
   "scripts": {
-    "clean": "rimraf dist",
     "dev": "yarn build --watch src",
+    "lint": "tsc --noEmit && eslint src",
     "build": "tsup src/index.ts --format esm,cjs --clean --onSuccess 'yarn build:declaration-map'",
     "build:declaration-map": "tsc --emitDeclarationOnly --declaration --declarationMap",
     "start": "node ./dist/index.js",
-    "lint": "tsc --noEmit && eslint src"
+    "clean": "rimraf ./dist"
   },
   "devDependencies": {
     "@acme/eslint-config": "*",

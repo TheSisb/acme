@@ -523,6 +523,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "acme@workspace:."
   dependencies:
+    rimraf: 3.0.2
     turbo: 1.2.14
     typescript: 4.7.2
   languageName: unknown

@@ -7,11 +7,14 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build",
     "dev": "turbo run dev --parallel",
-    "lint": "turbo run lint"
+    "lint": "turbo run lint",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "clean": "turbo run clean && rimraf ./node_modules"
   },
   "devDependencies": {
+    "rimraf": "3.0.2",
     "turbo": "1.2.14",
     "typescript": "4.7.2"
   },
