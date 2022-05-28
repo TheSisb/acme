@@ -1,0 +1,59 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "dev:api",
+      "type": "shell",
+      "command": "yarn workspace @acme/api dev",
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "group": "dev"
+      }
+    },
+    {
+      "label": "dev:cli",
+      "type": "shell",
+      "command": "yarn workspace @acme/cli dev",
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "group": "dev"
+      }
+    },
+    {
+      "label": "dev:web",
+      "type": "shell",
+      "command": "yarn workspace @acme/web dev",
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "group": "dev"
+      }
+    },
+    {
+      "label": "dev:sdk",
+      "type": "shell",
+      "command": "yarn workspace @acme/sdk dev",
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "group": "dev"
+      }
+    },
+    {
+      "label": "dev",
+      "dependsOn": [
+        "dev:api",
+        "dev:cli",
+        "dev:web",
+        "dev:sdk"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}
