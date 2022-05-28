@@ -2,7 +2,7 @@
   "display": "Node",
   "extends": "@tsconfig/node16-strictest-esm/tsconfig.json",
   "compilerOptions": {
-    "module": "node16"
+    "module": "nodenext"
   },
   "exclude": ["node_modules", "dist"]
 }
