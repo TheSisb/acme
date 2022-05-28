@@ -22,6 +22,7 @@ module.exports = {
     "unused-imports",
     "simple-import-sort",
     "import",
+    "unicorn",
   ],
   rules: {
     // TODO: @typescript-eslint/consistent-type-imports will be autofixable soon! (https://github.com/typescript-eslint/typescript-eslint/issues/4338)
@@ -41,6 +42,8 @@ module.exports = {
     "import/no-duplicates": "error",
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
+    "unicorn/prefer-module": "error",
+    "unicorn/prefer-node-protocol": "error",
     "unused-imports/no-unused-imports": "error",
 		"unused-imports/no-unused-vars": [
 			"warn",
