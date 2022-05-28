@@ -3,5 +3,6 @@
   "extends": "@tsconfig/node16-strictest-esm/tsconfig.json",
   "compilerOptions": {
     "module": "node16"
-  }
+  },
+  "exclude": ["node_modules", "dist"]
 }
