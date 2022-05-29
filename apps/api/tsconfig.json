@@ -1,8 +1,14 @@
 {
   "extends": "@acme/tsconfig/node",
   "compilerOptions": {
+    "baseUrl": "src",
     "outDir": "./dist",
-    "rootDir": "./src"
+    "rootDir": "./src",
+    "paths": {
+      // fix error TS2742: The inferred type of "X" cannot be named without a reference to "Y". This is likely not portable. A type annotation is necessary.
+      // read this issue for more context: https://github.com/microsoft/TypeScript/issues/42873#issuecomment-1140506416
+      "@trpc/server/*": ["../../../node_modules/@trpc/server/*"]
+    }
   },
   "include": ["src/**/*.ts"]
 }
