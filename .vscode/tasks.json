@@ -4,7 +4,7 @@
     {
       "label": "dev:api",
       "type": "shell",
-      "command": "yarn workspace @acme/api dev",
+      "command": "pnpm --filter @acme/api dev",
       "isBackground": true,
       "presentation": {
         "reveal": "always",
@@ -15,7 +15,7 @@
     {
       "label": "dev:cli",
       "type": "shell",
-      "command": "yarn workspace @acme/cli dev",
+      "command": "pnpm --filter @acme/cli dev",
       "isBackground": true,
       "presentation": {
         "reveal": "always",
@@ -26,7 +26,7 @@
     {
       "label": "dev:web",
       "type": "shell",
-      "command": "yarn workspace @acme/web dev",
+      "command": "pnpm --filter @acme/web dev",
       "isBackground": true,
       "presentation": {
         "reveal": "always",
@@ -37,7 +37,7 @@
     {
       "label": "dev:sdk",
       "type": "shell",
-      "command": "yarn workspace @acme/sdk dev",
+      "command": "pnpm --filter @acme/sdk dev",
       "isBackground": true,
       "presentation": {
         "reveal": "always",

@@ -2,13 +2,8 @@
   "name": "@acme/web",
   "version": "0.0.0",
   "private": true,
-  "scripts": {
-    "dev": "",
-    "build": "",
-    "start": "",
-    "lint": ""
-  },
+  "scripts": {},
   "devDependencies": {
-    "@acme/eslint-config": "*"
+    "@acme/eslint-config": "workspace:*"
   }
 }

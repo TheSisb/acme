@@ -14,16 +14,16 @@
     }
   },
   "scripts": {
-    "dev": "yarn build --watch src",
+    "dev": "pnpm build --watch src",
     "lint": "tsc --noEmit && eslint src",
-    "build": "tsup src/index.ts --format esm,cjs --clean --onSuccess 'yarn build:declaration-map'",
+    "build": "tsup src/index.ts --format esm,cjs --clean --onSuccess 'pnpm build:declaration-map'",
     "build:declaration-map": "tsc --emitDeclarationOnly --declaration --declarationMap",
     "start": "node ./dist/index.js",
-    "clean": "rimraf ./dist"
+    "clean": "rimraf ./dist ./node_modules"
   },
   "devDependencies": {
-    "@acme/eslint-config": "*",
-    "@acme/tsconfig": "*",
+    "@acme/eslint-config": "workspace:*",
+    "@acme/tsconfig": "workspace:*",
     "@types/node": "17.0.35",
     "eslint": "8.16.0",
     "rimraf": "3.0.2",
@@ -31,7 +31,7 @@
     "typescript": "4.7.2"
   },
   "dependencies": {
-    "@acme/sdk": "*",
+    "@acme/sdk": "workspace:*",
     "@tinyhttp/app": "2.0.20",
     "@trpc/server": "10.0.0-alpha.22",
     "zod": "3.17.3"
