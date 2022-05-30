@@ -18,6 +18,7 @@
     "build": "tsup src/index.ts --format esm,cjs --clean --onSuccess 'pnpm build:types'",
     "build:types": "tsc --emitDeclarationOnly --declaration --declarationMap",
     "start": "node ./dist/index.js",
+    "test": "vitest",
     "clean": "rimraf ./dist ./node_modules"
   },
   "devDependencies": {
@@ -28,7 +29,8 @@
     "eslint": "8.16.0",
     "rimraf": "3.0.2",
     "tsup": "6.0.1",
-    "typescript": "4.7.2"
+    "typescript": "4.7.2",
+    "vitest": "0.13.0"
   },
   "dependencies": {
     "yargs": "17.5.1"
