@@ -16,7 +16,7 @@
     "dev": "pnpm build --watch src",
     "lint": "tsc --noEmit && eslint src",
     "build": "tsup src/index.ts --format esm,cjs --clean --onSuccess 'pnpm build:types'",
-    "build:types": "tsc --emitDeclarationOnly --declaration --declarationMap",
+    "build:types": "tsc --project tsconfig.build.json --emitDeclarationOnly --declaration --declarationMap",
     "start": "node ./dist/index.js",
     "test": "vitest",
     "clean": "rimraf ./dist ./node_modules"
@@ -24,8 +24,10 @@
   "devDependencies": {
     "@acme/eslint-config": "workspace:*",
     "@acme/tsconfig": "workspace:*",
+    "@faker-js/faker": "7.1.0",
     "@types/node": "17.0.35",
     "@types/yargs": "17.0.10",
+    "cli-testing-library": "1.0.2",
     "eslint": "8.16.0",
     "rimraf": "3.0.2",
     "tsup": "6.0.1",

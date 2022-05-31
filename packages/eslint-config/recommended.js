@@ -15,7 +15,7 @@ module.exports = {
     extraFileExtensions: [".cjs", ".json"],
     project: [
       "./tsconfig.json",
-      "./tsconfig.settings.json"
+      "./tsconfig.settings.json",
     ],
   },
   plugins: [
