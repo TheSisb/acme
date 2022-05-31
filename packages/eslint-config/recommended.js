@@ -37,6 +37,8 @@ module.exports = {
     "@typescript-eslint/prefer-ts-expect-error": "error",
     "@typescript-eslint/sort-type-union-intersection-members": "error",
     "@typescript-eslint/switch-exhaustiveness-check": "error",
+    // TODO: Unfortunatly no autofix for now: https://github.com/import-js/eslint-plugin-import/issues/1749
+    "import/extensions": ["error", "ignorePackages"],
     "import/first": "error",
     "import/newline-after-import": "error",
     "import/no-duplicates": "error",
