@@ -7,17 +7,12 @@ export const runCommand = async (
   args: string[],
   opts?: Partial<RenderOptions>
 ) => {
-  const cli = await render(
-    "node",
-    [
-      path.resolve(
-        path.dirname(url.fileURLToPath(import.meta.url)),
-        "./dist/index.js"
-      ),
-      ...args,
-    ],
-    opts
+  const programPath = path.resolve(
+    path.dirname(url.fileURLToPath(import.meta.url)),
+    "./dist/index.js"
   );
+
+  const cli = await render("node", [programPath, ...args], opts);
 
   return cli;
 };
