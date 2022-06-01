@@ -9,7 +9,7 @@ export const runCommand = async (
 ) => {
   const programPath = path.resolve(
     path.dirname(url.fileURLToPath(import.meta.url)),
-    "./dist/index.js"
+    "../dist/index.js"
   );
 
   const cli = await render("node", [programPath, ...args], opts);

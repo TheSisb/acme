@@ -11,7 +11,7 @@ export function projectCreateCommand(yargs: Argv) {
       });
     },
     (args) => {
-      console.log(`Creating project ${args.name}`);
+      console.log(`Project ${args.name} created`);
     }
   );
 }
