@@ -1,12 +1,12 @@
-import yargs from "yargs";
+import createYargs from "yargs";
 import { hideBin } from "yargs/helpers";
 
 import { projectCommand } from "./commands/project/index.js";
 
-const program = yargs(hideBin(process.argv));
+const yargs = createYargs(hideBin(process.argv));
 
-program.scriptName("acme");
+yargs.scriptName("acme");
 
-projectCommand(program);
+projectCommand(yargs);
 
-void program.parse();
+void yargs.parse();
