@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "@acme/sdk": "workspace:*",
-    "@tinyhttp/app": "2.0.21",
+    "@tinyhttp/app": "2.0.22",
     "@trpc/server": "10.0.0-alpha.22",
     "zod": "3.17.3"
   }
