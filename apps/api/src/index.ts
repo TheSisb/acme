@@ -1,6 +1,6 @@
 import { App } from "@tinyhttp/app";
-import * as trpcExpress from "@trpc/server/adapters/express";
 
+import { createTinyHTTPMiddleware } from "./adapter.js";
 import { createContext } from "./context.js";
 import { appRouter } from "./router.js";
 
@@ -8,7 +8,7 @@ const app = new App();
 
 app.use(
   "/trpc",
-  trpcExpress.createExpressMiddleware({
+  createTinyHTTPMiddleware({
     router: appRouter,
     createContext,
   })
