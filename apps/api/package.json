@@ -25,6 +25,7 @@
     "@acme/tsconfig": "workspace:*",
     "@types/node": "17.0.40",
     "eslint": "8.17.0",
+    "kill-port": "2.0.0",
     "nodemon": "2.0.16",
     "rimraf": "3.0.2",
     "tsup": "6.1.0",
@@ -33,7 +34,7 @@
   "dependencies": {
     "@acme/sdk": "workspace:*",
     "@tinyhttp/app": "2.0.22",
-    "@trpc/server": "10.0.0-alpha.24",
+    "@trpc/server": "10.0.0-alpha.25",
     "zod": "3.17.3"
   }
 }

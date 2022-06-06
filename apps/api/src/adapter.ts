@@ -21,7 +21,7 @@ export function createTinyHTTPMiddleware<TRouter extends AnyRouter>(
   opts: NodeHTTPHandlerOptions<TRouter, tinyhttp.Request, tinyhttp.Response>
 ): Handler {
   return async (req, res) => {
-    const endpoint = req.path.slice(1);
+    const endpoint = req.path.replace("/trpc/", "");
 
     await nodeHTTPRequestHandler({
       ...opts,

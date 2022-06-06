@@ -2,5 +2,5 @@
   "watch": ["src"],
   "ignore": ["src/**/*.test.ts"],
   "ext": "ts",
-  "exec": "pnpm build && pnpm start"
+  "exec": "pnpm build && pnpm kill-port 4000 && pnpm start"
 }
