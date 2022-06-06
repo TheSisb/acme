@@ -15,7 +15,7 @@
   "scripts": {
     "dev": "pnpm build --watch src",
     "lint": "tsc --noEmit && eslint src",
-    "build": "tsup src/index.ts --format esm,cjs --clean --onSuccess 'pnpm build:types'",
+    "build": "tsup",
     "build:types": "tsc --project tsconfig.build.json --emitDeclarationOnly --declaration --declarationMap",
     "start": "node ./dist/index.js",
     "test": "vitest",
@@ -36,7 +36,9 @@
   "dependencies": {
     "@acme/api": "workspace:*",
     "@trpc/client": "10.0.0-alpha.24",
+    "@trpc/server": "10.0.0-alpha.24",
     "cli-testing-library": "1.0.4",
+    "undici": "5.4.0",
     "yargs": "17.5.1"
   }
 }
