@@ -1,6 +1,7 @@
 import type { Argv } from "yargs";
 
 import { projectCreateCommand } from "./create.js";
+import { helloCommand } from "./hello.js";
 import { projectListCommand } from "./list.js";
 
 export function projectCommand(yargs: Argv) {
@@ -8,6 +9,7 @@ export function projectCommand(yargs: Argv) {
     "project",
     "Projects management",
     (yargs) => {
+      helloCommand(yargs);
       projectCreateCommand(yargs);
       projectListCommand(yargs);
       return yargs;

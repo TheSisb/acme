@@ -31,9 +31,11 @@
     "rimraf": "3.0.2",
     "tsup": "6.1.0",
     "typescript": "4.7.3",
-    "vitest": "0.14.0"
+    "vitest": "0.14.1"
   },
   "dependencies": {
+    "@acme/api": "workspace:*",
+    "@trpc/client": "10.0.0-alpha.24",
     "cli-testing-library": "1.0.4",
     "yargs": "17.5.1"
   }

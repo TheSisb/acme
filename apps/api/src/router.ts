@@ -4,14 +4,12 @@ import { z } from "zod";
 import type { Context } from "./context.js";
 
 export const appRouter = trpc.router<Context>().query("hello", {
-  input: z
-    .object({
-      text: z.string().nullish(),
-    })
-    .nullish(),
+  input: z.object({
+    name: z.string().optional(),
+  }),
   resolve({ input }) {
     return {
-      greeting: `hello ${input?.text ?? "world"}`,
+      greeting: `hello ${input.name ?? "world"}`,
     };
   },
 });
