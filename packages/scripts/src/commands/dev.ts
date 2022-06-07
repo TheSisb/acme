@@ -1,6 +1,8 @@
 import { command } from "cleye";
 import { execa } from "execa";
 
+import { tsupBuildOptions } from "./build.js";
+
 export const devCommand = command(
   {
     name: "dev",
@@ -13,22 +15,20 @@ export const devCommand = command(
       ? [
           "--onSuccess",
           // TODO: find a way to make this work, by calling back acme-scripts with a custom command
-          "tsc --project tsconfig.build.json --emitDeclarationOnly --declaration --declarationMap && kill-port 4000 && node dist/index.js",
+          "acme-scripts build --types && kill-port 4000 && node dist/index.js",
         ]
-      : [
-          "--onSuccess",
-          "tsc --project tsconfig.build.json --emitDeclarationOnly --declaration --declarationMap",
-        ];
+      : ["--onSuccess", "acme-scripts build --types"];
 
-    execa("tsup", [
-      "src/index.ts",
-      "--format",
-      "esm,cjs",
-      "--clean",
-      "--watch",
-      "--ignore-watch",
-      "src/**/*.test.ts",
-      ...restartArgs,
-    ]).stdout?.pipe(process.stdout);
+    void execa(
+      "tsup",
+      [
+        ...tsupBuildOptions,
+        "--watch",
+        "--ignore-watch",
+        "src/**/*.test.ts",
+        ...restartArgs,
+      ],
+      { stdio: "inherit" }
+    );
   }
 );

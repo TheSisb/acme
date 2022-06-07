@@ -1,6 +1,13 @@
 import { command } from "cleye";
 import { execa } from "execa";
 
+export const tsupBuildOptions = [
+  "src/index.ts",
+  "--format",
+  "esm,cjs",
+  "--clean",
+];
+
 export const buildCommand = command(
   {
     name: "build",
@@ -24,14 +31,7 @@ export const buildCommand = command(
     } else {
       void execa(
         "tsup",
-        [
-          "src/index.ts",
-          "--format",
-          "esm,cjs",
-          "--clean",
-          "--onSuccess",
-          "acme-scripts build --types",
-        ],
+        [...tsupBuildOptions, "--onSuccess", "acme-scripts build --types"],
         { stdio: "inherit" }
       );
     }
