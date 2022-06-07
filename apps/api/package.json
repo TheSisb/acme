@@ -13,20 +13,22 @@
   "main": "./dist/index.cjs",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "dev": "nodemon",
+    "dev": "pnpm build:base --watch src --ignore-watch src/**/*.test.ts --onSuccess 'pnpm run restart'",
     "lint": "tsc --noEmit && eslint src",
-    "build": "tsup src/index.ts --format esm,cjs --clean --onSuccess 'pnpm build:types'",
+    "build": "pnpm build:base --onSuccess 'pnpm build:types'",
+    "build:base": "tsup src/index.ts --format esm,cjs --clean",
     "build:types": "tsc --emitDeclarationOnly --declaration --declarationMap",
     "start": "node ./dist/index.js",
+    "restart": "kill-port 4000 && pnpm start",
     "clean": "rimraf ./dist ./node_modules"
   },
   "devDependencies": {
     "@acme/eslint-config": "workspace:*",
     "@acme/tsconfig": "workspace:*",
     "@types/node": "17.0.40",
+    "concurrently": "7.2.1",
     "eslint": "8.17.0",
     "kill-port": "2.0.0",
-    "nodemon": "2.0.16",
     "rimraf": "3.0.2",
     "tsup": "6.1.0",
     "typescript": "4.7.3"
