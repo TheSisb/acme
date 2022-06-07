@@ -17,7 +17,7 @@
     "lint": "tsc --noEmit && eslint src",
     "build": "pnpm build:base --onSuccess 'pnpm build:types'",
     "build:base": "tsup src/index.ts --format esm,cjs --clean",
-    "build:types": "tsc --emitDeclarationOnly --declaration --declarationMap",
+    "build:types": "tsc --project tsconfig.build.json --emitDeclarationOnly --declaration --declarationMap",
     "start": "node ./dist/index.js",
     "restart": "kill-port 4000 && pnpm start",
     "clean": "rimraf ./dist ./node_modules"

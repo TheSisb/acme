@@ -14,8 +14,7 @@ module.exports = {
   parserOptions: {
     extraFileExtensions: [".cjs", ".json"],
     project: [
-      "./tsconfig.json",
-      "./tsconfig.settings.json",
+      "./tsconfig.json"
     ],
   },
   plugins: [

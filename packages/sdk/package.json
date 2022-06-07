@@ -13,10 +13,10 @@
   "main": "./dist/index.cjs",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "dev": "pnpm build --watch src",
+    "dev": "pnpm build --watch src --ignore-watch src/**/*.test.ts",
     "lint": "tsc --noEmit && eslint src",
     "build": "tsup src/index.ts --format esm,cjs --clean --onSuccess 'pnpm build:types'",
-    "build:types": "tsc --emitDeclarationOnly --declaration --declarationMap",
+    "build:types": "tsc --project tsconfig.build.json --emitDeclarationOnly --declaration --declarationMap",
     "start": "node ./dist/index.js",
     "clean": "rimraf ./dist ./node_modules"
   },

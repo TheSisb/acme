@@ -1,9 +1,9 @@
 {
   "extends": "@acme/tsconfig/node",
   "compilerOptions": {
-    "baseUrl": "src",
-    "outDir": "./dist",
-    "rootDir": "./src"
+    "types": ["vitest/globals"],
+    "outDir": "dist"
   },
-  "include": ["src/**/*.ts"]
+  "include": ["**/*.ts", "**/*.json", ".eslintrc.cjs"],
+  "exclude": ["dist", "node_modules"]
 }

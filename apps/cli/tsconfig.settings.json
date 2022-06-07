@@ -1,4 +1,0 @@
-{
-  "extends": "@acme/tsconfig/node",
-  "include": ["./.eslintrc.cjs",  "./*.js", "./*.json", "./*.ts"]
-}
