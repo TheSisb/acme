@@ -5,7 +5,7 @@ export const startCommand = command(
   {
     name: "start",
   },
-  () => {
-    void execa("node", ["dist/index.js"], { stdio: "inherit" });
+  (argv) => {
+    void execa("node", ["dist/index.js", ...argv._], { stdio: "inherit" });
   }
 );

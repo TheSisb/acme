@@ -21,13 +21,17 @@ export function createTinyHTTPMiddleware<TRouter extends AnyRouter>(
   opts: NodeHTTPHandlerOptions<TRouter, tinyhttp.Request, tinyhttp.Response>
 ): Handler {
   return async (req, res) => {
-    const endpoint = req.path.replace("/trpc/", "");
+    const queryIndex = req.url.indexOf("?");
+    const path = req.url.slice(
+      1,
+      queryIndex === -1 ? req.url.length : queryIndex
+    );
 
     await nodeHTTPRequestHandler({
       ...opts,
       req,
       res,
-      path: endpoint,
+      path,
     });
   };
 }

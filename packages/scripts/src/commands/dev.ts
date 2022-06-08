@@ -11,7 +11,7 @@ export const devCommand = command(
     },
   },
   (argv) => {
-    const restartArgs = argv.flags.restart
+    const onSuccessArgs = argv.flags.restart
       ? [
           "--onSuccess",
           // TODO: it will work once https://github.com/egoist/tsup/pull/649 is merged and released
@@ -28,7 +28,7 @@ export const devCommand = command(
         "--watch",
         "--ignore-watch",
         "src/**/*.test.ts",
-        ...restartArgs,
+        ...onSuccessArgs,
       ],
       { stdio: "inherit" }
     );
