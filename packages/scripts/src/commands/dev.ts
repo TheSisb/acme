@@ -7,15 +7,14 @@ export const devCommand = command(
   {
     name: "dev",
     flags: {
-      restart: Boolean,
+      restart: Number,
     },
   },
   (argv) => {
     const restartArgs = argv.flags.restart
       ? [
           "--onSuccess",
-          // TODO: find a way to make this work, by calling back acme-scripts with a custom command
-          "acme-scripts build --types && kill-port 4000 && node dist/index.js",
+          `acme-scripts build --types && kill-port ${argv.flags.restart} && node dist/index.js`,
         ]
       : ["--onSuccess", "acme-scripts build --types"];
 

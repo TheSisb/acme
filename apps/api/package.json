@@ -13,17 +13,16 @@
   "main": "./dist/index.cjs",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "dev": "pnpm build:base --watch src --ignore-watch src/**/*.test.ts --onSuccess 'pnpm run restart'",
-    "lint": "tsc --noEmit && eslint src",
-    "build": "pnpm build:base --onSuccess 'pnpm build:types'",
-    "build:base": "tsup src/index.ts --format esm,cjs --clean",
-    "build:types": "tsc --project tsconfig.build.json --emitDeclarationOnly --declaration --declarationMap",
-    "start": "node ./dist/index.js",
-    "restart": "kill-port 4000 && pnpm start",
-    "clean": "rimraf ./dist ./node_modules"
+    "dev": "acme-scripts dev --restart 4000",
+    "lint": "acme-scripts lint",
+    "build": "acme-scripts build",
+    "start": "acme-scripts start",
+    "test": "acme-scripts test",
+    "clean": "acme-scripts clean"
   },
   "devDependencies": {
     "@acme/eslint-config": "workspace:*",
+    "@acme/scripts": "workspace:*",
     "@acme/tsconfig": "workspace:*",
     "@types/node": "17.0.41",
     "concurrently": "7.2.1",

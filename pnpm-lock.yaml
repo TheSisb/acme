@@ -13,6 +13,7 @@ importers:
   apps/api:
     specifiers:
       '@acme/eslint-config': workspace:*
+      '@acme/scripts': workspace:*
       '@acme/sdk': workspace:*
       '@acme/tsconfig': workspace:*
       '@tinyhttp/app': 2.0.22
@@ -32,6 +33,7 @@ importers:
       zod: 3.17.3
     devDependencies:
       '@acme/eslint-config': link:../../packages/eslint-config
+      '@acme/scripts': link:../../packages/scripts
       '@acme/tsconfig': link:../../packages/tsconfig
       '@types/node': 17.0.41
       concurrently: 7.2.1
@@ -118,6 +120,7 @@ importers:
   packages/scripts:
     specifiers:
       '@acme/eslint-config': workspace:*
+      '@acme/scripts': workspace:*
       '@acme/tsconfig': workspace:*
       '@types/node': 17.0.41
       cleye: 1.2.1
@@ -141,6 +144,7 @@ importers:
       vitest: 0.14.1
     devDependencies:
       '@acme/eslint-config': link:../eslint-config
+      '@acme/scripts': 'link:'
       '@acme/tsconfig': link:../tsconfig
       '@types/node': 17.0.41
 

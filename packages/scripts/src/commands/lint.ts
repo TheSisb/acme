@@ -6,7 +6,8 @@ export const lintCommand = command(
     name: "lint",
   },
   () => {
-    void execa("concurrently", ["pnpm tsc --noEmit", "pnpm eslint src"], {
+    void execa("tsc --project tsconfig.build.json --noEmit && eslint src", {
+      shell: true,
       stdio: "inherit",
     });
   }
