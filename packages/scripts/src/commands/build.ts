@@ -13,6 +13,14 @@ export const tsupBuildOptions = [
   "--clean",
 ];
 
+const tscBuildOptions = [
+  "--project",
+  "tsconfig.build.json",
+  "--emitDeclarationOnly",
+  "--declaration",
+  "--declarationMap",
+];
+
 export const buildCommand = command(
   {
     name: "build",
@@ -22,21 +30,15 @@ export const buildCommand = command(
   },
   (argv) => {
     if (argv.flags.types) {
-      void execa(
-        "tsc",
-        [
-          "--project",
-          "tsconfig.build.json",
-          "--emitDeclarationOnly",
-          "--declaration",
-          "--declarationMap",
-        ],
-        { stdio: "inherit" }
-      );
+      void execa("tsc", tscBuildOptions, { stdio: "inherit" });
     } else {
       void execa(
         "tsup",
-        [...tsupBuildOptions, "--onSuccess", "acme-scripts build --types"],
+        [
+          ...tsupBuildOptions,
+          "--onSuccess",
+          `tsc ${tscBuildOptions.join(" ")}`,
+        ],
         { stdio: "inherit" }
       );
     }

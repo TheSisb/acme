@@ -25,7 +25,6 @@
   },
   "dependencies": {
     "cleye": "1.2.1",
-    "concurrently": "7.2.1",
     "eslint": "8.17.0",
     "execa": "6.1.0",
     "kill-port": "2.0.0",
