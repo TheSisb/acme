@@ -16,11 +16,12 @@
     "acme-scripts": "./dist/index.js"
   },
   "scripts": {
-    "dev": "acme-scripts dev",
-    "lint": "acme-scripts lint",
-    "build": "acme-scripts build",
-    "start": "acme-scripts start",
-    "clean": "acme-scripts clean"
+    "acme-scripts": "tsx ./src/index.ts",
+    "dev": "pnpm acme-scripts dev",
+    "lint": "pnpm acme-scripts lint",
+    "build": "pnpm acme-scripts build",
+    "start": "pnpm acme-scripts start",
+    "clean": "pnpm acme-scripts clean"
   },
   "dependencies": {
     "cleye": "1.2.1",
@@ -35,8 +36,8 @@
   },
   "devDependencies": {
     "@acme/eslint-config": "workspace:*",
-    "@acme/scripts": "workspace:*",
     "@acme/tsconfig": "workspace:*",
-    "@types/node": "17.0.41"
+    "@types/node": "17.0.41",
+    "tsx": "3.4.2"
   }
 }
