@@ -13,7 +13,7 @@ export const tsupBuildOptions = [
   "--clean",
 ];
 
-const tscBuildOptions = [
+export const tscBuildOptions = [
   "--project",
   "tsconfig.build.json",
   "--emitDeclarationOnly",

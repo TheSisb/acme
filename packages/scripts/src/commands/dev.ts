@@ -1,7 +1,7 @@
 import { command } from "cleye";
 import { execa } from "execa";
 
-import { tsupBuildOptions } from "./build.js";
+import { tscBuildOptions, tsupBuildOptions } from "./build.js";
 
 export const devCommand = command(
   {
@@ -15,9 +15,11 @@ export const devCommand = command(
       ? [
           "--onSuccess",
           // TODO: it will work once https://github.com/egoist/tsup/pull/649 is merged and released
-          `acme-scripts build --types && kill-port ${argv.flags.restart} && node dist/index.js`,
+          `tsc ${tscBuildOptions.join(" ")} && kill-port ${
+            argv.flags.restart
+          } && node dist/index.js`,
         ]
-      : ["--onSuccess", "acme-scripts build --types"];
+      : ["--onSuccess", `tsc ${tscBuildOptions.join(" ")}`];
 
     void execa(
       "tsup",
