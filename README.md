@@ -1,6 +1,14 @@
 A playground to explore how to build a robust monorepo with Turborepo, TypeScript and ECMAScript modules
 
-What we got so far:
+## Monorepo tooling
 - [x] Lint packages (Type-checking + ESLint)
 - [x] Build packages
-- [ ] Tests (Vitest and Playwright)
+- [x] Watch packages
+- [x] Tests (Vitest)
+- [ ] E2E tests (Playwright)
+
+## Apps and packages
+- [x] CLI (yargs)
+- [x] API (trpc)
+- [ ] Web (Remix or SolidJS)
+- [x] Internal packages (scripts, eslint-config, sdk, tsconfig)
