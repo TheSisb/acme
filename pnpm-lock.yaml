@@ -155,6 +155,7 @@ importers:
   packages/sdk:
     specifiers:
       '@acme/eslint-config': workspace:*
+      '@acme/scripts': workspace:*
       '@acme/tsconfig': workspace:*
       '@types/node': 17.0.41
       eslint: 8.17.0
@@ -163,6 +164,7 @@ importers:
       typescript: 4.7.3
     devDependencies:
       '@acme/eslint-config': link:../eslint-config
+      '@acme/scripts': link:../scripts
       '@acme/tsconfig': link:../tsconfig
       '@types/node': 17.0.41
       eslint: 8.17.0
