@@ -2,8 +2,27 @@
   "name": "@acme/web",
   "version": "0.0.0",
   "private": true,
-  "scripts": {},
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "acme-scripts dev",
+    "lint": "acme-scripts lint",
+    "build": "acme-scripts build",
+    "start": "acme-scripts start",
+    "test": "acme-scripts test",
+    "clean": "acme-scripts clean"
+  },
   "devDependencies": {
-    "@acme/eslint-config": "workspace:*"
+    "@acme/eslint-config": "workspace:*",
+    "@acme/scripts": "workspace:*",
+    "@acme/tsconfig": "workspace:*"
   }
 }

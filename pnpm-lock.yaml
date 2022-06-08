@@ -85,8 +85,12 @@ importers:
   apps/web:
     specifiers:
       '@acme/eslint-config': workspace:*
+      '@acme/scripts': workspace:*
+      '@acme/tsconfig': workspace:*
     devDependencies:
       '@acme/eslint-config': link:../../packages/eslint-config
+      '@acme/scripts': link:../../packages/scripts
+      '@acme/tsconfig': link:../../packages/tsconfig
 
   packages/eslint-config:
     specifiers:
