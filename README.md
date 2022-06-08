@@ -15,4 +15,4 @@ A playground to explore how to build a robust monorepo with Turborepo, TypeScrip
 
 ### Awaiting fixes and improvements
 - `tsup --onSuccess` complex commands: https://github.com/egoist/tsup/pull/649
-- `tsup --tsconfig` option: https://github.com/egoist/tsup/issues/650
+- `tsup --tsconfig` option: https://github.com/egoist/tsup/pull/652
