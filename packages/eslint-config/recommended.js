@@ -2,6 +2,12 @@
  * @type { import("eslint").Linter.Config }
  */
 module.exports = {
+  env: {
+    // https://kangax.github.io/compat-table/es2016plus/#node16_11
+    es2022: true,
+    node: true,
+  },
+  root: true,
   extends: [
     "eslint:recommended",
     "plugin:prettier/recommended",
