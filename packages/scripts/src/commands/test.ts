@@ -5,7 +5,7 @@ export const testCommand = command(
   {
     name: "test",
   },
-  () => {
-    void execa("vitest", { stdio: "inherit" });
+  (argv) => {
+    void execa("vitest", argv._, { stdio: "inherit" });
   }
 );
