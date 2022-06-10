@@ -14,7 +14,6 @@ export const devCommand = command(
     const onSuccessArgs = argv.flags.restart
       ? [
           "--onSuccess",
-          // TODO: it will work once https://github.com/egoist/tsup/pull/649 is merged and released
           `tsc ${tscBuildOptions.join(" ")} && kill-port ${
             argv.flags.restart
           } && node dist/index.js`,

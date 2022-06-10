@@ -6,9 +6,8 @@ import { execa } from "execa";
 
 export const tsupBuildOptions = [
   "src/index.ts",
-  // TODO: it will work once https://github.com/egoist/tsup/pull/652 is merged and released
-  // "--tsconfig",
-  // "tsconfig.build.json",
+  "--tsconfig",
+  "tsconfig.build.json",
   "--format",
   "esm,cjs",
   "--target",
