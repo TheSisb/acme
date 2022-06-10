@@ -12,7 +12,3 @@ A playground to explore how to build a robust monorepo with Turborepo, TypeScrip
 - [x] API (trpc)
 - [ ] Web (Remix or SolidJS)
 - [x] Internal packages (scripts, eslint-config, sdk, tsconfig)
-
-### Awaiting fixes and improvements
-- `tsup --onSuccess` complex commands: https://github.com/egoist/tsup/pull/649
-- `tsup --tsconfig` option: https://github.com/egoist/tsup/pull/652
