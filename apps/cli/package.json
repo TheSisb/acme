@@ -32,7 +32,7 @@
     "@trpc/client": "10.0.0-alpha.25",
     "@trpc/server": "10.0.0-alpha.25",
     "cli-testing-library": "1.0.4",
-    "node-fetch": "3.2.5",
+    "node-fetch": "3.2.6",
     "yargs": "17.5.1"
   }
 }
