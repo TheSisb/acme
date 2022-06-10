@@ -1,0 +1,7 @@
+{
+  "extends": [
+    "schedule:daily",
+    "group:allNonMajor"
+  ],
+  "timezone": "Europe/Paris"
+}
