@@ -1,6 +1,6 @@
 {
   "extends": [
-    "schedule:daily",
+    "schedule:weekly",
     "group:allNonMajor"
   ],
   "timezone": "Europe/Paris"
