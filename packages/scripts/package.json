@@ -36,7 +36,7 @@
   "devDependencies": {
     "@acme/eslint-config": "workspace:*",
     "@acme/tsconfig": "workspace:*",
-    "@types/node": "17.0.41",
+    "@types/node": "17.0.42",
     "tsx": "3.4.2"
   }
 }
